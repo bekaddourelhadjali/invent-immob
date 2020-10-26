@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1014.0" stylesheets="@main2.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="invent_immob.MainAppController">
+   <children>
+      <VBox prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@main2.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <JFXTabPane maxHeight="520.0" maxWidth="1000.0" minHeight="520.0" minWidth="1000.0" prefHeight="520.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Gestion des utilisateurs">
+                     <content>
+                        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="768.0" prefWidth="1024.0">
+                           <children>
+                              <TableView fx:id="table" layoutX="36.0" layoutY="85.0" onMouseClicked="#affiche" prefHeight="360.0" prefWidth="574.0">
+                                 <columns>
+                                    <TableColumn prefWidth="128.0" text="Nom d'utilisateur">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="username" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn minWidth="6.0" prefWidth="163.0" text="Password">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="password" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn minWidth="6.0" prefWidth="154.0" text="Type">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="type" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <JFXButton fx:id="adduserB" buttonType="RAISED" layoutX="655.0" layoutY="361.0" mnemonicParsing="false" onAction="#adduser" prefHeight="40.0" prefWidth="90.0" text="AJOUTER" />
+                              <JFXButton fx:id="edituserB" buttonType="RAISED" layoutX="769.0" layoutY="361.0" mnemonicParsing="false" onAction="#edituser" prefHeight="40.0" prefWidth="90.0" text="MODIFIER" />
+                              <JFXButton fx:id="deluserB" buttonType="RAISED" layoutX="879.0" layoutY="361.0" mnemonicParsing="false" onAction="#deluser" prefHeight="40.0" prefWidth="90.0" text="SUPPRIMER" />
+                              <JFXTextField fx:id="searchuserT" focusColor="#006aff" layoutX="36.0" layoutY="24.0" onKeyReleased="#searchuser" prefHeight="40.0" prefWidth="300.0" promptText="Rechercher" unFocusColor="#dddddd">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <GridPane layoutX="688.0" layoutY="105.0" prefHeight="229.0" prefWidth="227.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="216.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXPasswordField fx:id="password" focusColor="#006aff" prefHeight="40.0" prefWidth="150.0" promptText="Mot de passe" unFocusColor="#dddddd" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                    <JFXComboBox fx:id="type" focusColor="#006aff" prefHeight="40.0" prefWidth="230.0" promptText="Type" unFocusColor="#dddddd" GridPane.rowIndex="2" />
+                                    <JFXTextField fx:id="username" focusColor="#006aff" prefHeight="40.0" prefWidth="273.0" promptText="Nom d'utilisateur" unFocusColor="#dddddd">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </GridPane>
+                              <JFXButton buttonType="RAISED" layoutX="866.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#makeDeco" prefHeight="40.0" prefWidth="120.0" text="DECONNEXION" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Gestion des installations">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="1000.0">
+                           <children>
+                              <TableView fx:id="tab_ins" layoutX="7.0" layoutY="74.0" prefHeight="395.0" prefWidth="986.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Code">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Libelle">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="libelle" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Compte#Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="compte_act" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Date#acquisition">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="date_acq" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="actif" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Code#Adm">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code_adm" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Quantitié">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="quantite" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Observation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="remarque" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Localisation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="local" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <JFXTextField fx:id="search_ins" focusColor="#006aff" layoutX="36.0" layoutY="21.0" onKeyReleased="#search_inst" prefHeight="40.0" prefWidth="327.0" promptText="Rechercher" unFocusColor="#dddddd">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="importer" buttonType="RAISED" layoutX="435.0" layoutY="21.0" mnemonicParsing="false" onAction="#importer_ins" prefHeight="40.0" prefWidth="85.0" text="IMPORTER" />
+                              <JFXButton buttonType="RAISED" layoutX="866.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#makeDeco" prefHeight="40.0" prefWidth="120.0" text="DECONNEXION" />
+                              <JFXButton buttonType="RAISED" layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#print_ins" prefHeight="40.0" prefWidth="85.0" text="IMPRIMER" />
+                              <JFXButton buttonType="RAISED" layoutX="535.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#export_ins" prefHeight="40.0" prefWidth="85.0" text="EXPORTER" />
+                              <JFXButton buttonType="RAISED" layoutX="735.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#ecart_ins" prefHeight="40.0" prefWidth="85.0" text="LES ECARTS" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Gestion des Mobiliers &amp; Materiel">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="1000.0">
+                           <children>
+                              <TableView fx:id="tab_mat" layoutX="7.0" layoutY="74.0" prefHeight="395.0" prefWidth="986.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Code">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Libelle">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="libelle" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Compte#Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="compte_act" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Date#acquisition">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="date_acq" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="actif" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Code#Adm">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code_adm" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Quantitié">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="quantite" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Observation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="remarque" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Localisation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="local" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <JFXTextField fx:id="search_ma" focusColor="#006aff" layoutX="36.0" layoutY="21.0" onKeyReleased="#search_mat" prefHeight="40.0" prefWidth="327.0" promptText="Rechercher" unFocusColor="#dddddd">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="importer1" buttonType="RAISED" layoutX="435.0" layoutY="21.0" mnemonicParsing="false" onAction="#importer_mat" prefHeight="40.0" prefWidth="85.0" text="IMPORTER" />
+                              <JFXButton buttonType="RAISED" layoutX="866.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#makeDeco" prefHeight="40.0" prefWidth="120.0" text="DECONNEXION" />
+                              <JFXButton buttonType="RAISED" layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#print_mat" prefHeight="40.0" prefWidth="85.0" text="IMPRIMER" />
+                              <JFXButton buttonType="RAISED" layoutX="535.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#export_mat" prefHeight="40.0" prefWidth="85.0" text="EXPORTER" />
+                              <JFXButton buttonType="RAISED" layoutX="735.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#ecart_mat" prefHeight="40.0" prefWidth="85.0" text="LES ECARTS" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Historique  ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="1000.0">
+                           <children>
+                              <TableView fx:id="tabhist" layoutX="7.0" layoutY="74.0" prefHeight="395.0" prefWidth="986.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Code">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Libelle">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="libelle" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Compte#Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="compte_act" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Date#acquisition">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="date_acq" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Actif">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="actif" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Code#Adm">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="code_adm" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Quantitié">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="quantite" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Observation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="remarque" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="Localisation">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="local" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <JFXTextField fx:id="search_h" focusColor="#006aff" layoutX="36.0" layoutY="21.0" onKeyReleased="#search_his" prefHeight="40.0" prefWidth="327.0" promptText="Rechercher" unFocusColor="#dddddd">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton buttonType="RAISED" layoutX="866.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#makeDeco" prefHeight="40.0" prefWidth="120.0" text="DECONNEXION" />
+                              <JFXComboBox fx:id="htype" focusColor="#006aff" layoutX="390.0" layoutY="22.0" prefHeight="39.0" prefWidth="192.0" unFocusColor="#dddddd" />
+                              <JFXComboBox fx:id="hyear" focusColor="#006aff" layoutX="612.0" layoutY="22.0" prefHeight="40.0" prefWidth="81.0" unFocusColor="#dddddd" />
+                              <JFXButton buttonType="RAISED" layoutX="723.0" layoutY="21.0" onMouseClicked="#filtrer" prefHeight="40.0" prefWidth="90.0" text="FILITRER" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <JFXButton id="min" alignment="TOP_RIGHT" layoutX="905.0" layoutY="6.0" onMouseClicked="#min" prefHeight="35.0" prefWidth="34.0" text="_">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+         <padding>
+            <Insets right="7.0" top="-21.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="close" alignment="TOP_RIGHT" layoutX="955.0" layoutY="6.0" onMouseClicked="#close" prefHeight="25.0" prefWidth="25.0" text="X">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Button layoutX="855.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#settings" prefHeight="35.0" prefWidth="38.0" style="-fx-border-width: 3px;">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../view/user-settings-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>

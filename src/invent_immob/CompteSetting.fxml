@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="600.0" style="-fx-background-color: #fff;" stylesheets="@main2.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="invent_immob.CompteSettingController">
+   <children>
+      <StackPane layoutX="256.0" layoutY="135.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTabPane>
+               <tabs>
+                  <Tab text="Changer votre nom d'utilisateur">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="586.0">
+                           <children>
+                              <JFXTextField fx:id="username" focusColor="#006aff" layoutX="45.0" layoutY="45.0" prefHeight="35.0" prefWidth="270.0" promptText="Nouveau nom d'utilisateur" />
+                              <JFXPasswordField fx:id="password" focusColor="#006aff" layoutX="45.0" layoutY="125.0" prefHeight="35.0" prefWidth="270.0" promptText="Votre mot de passe" />
+                              <JFXButton layoutX="138.0" layoutY="205.0" onMouseClicked="#save_user" text="Enregistrer " />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Changer votre Mot de passe">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXPasswordField fx:id="news" layoutX="45.0" layoutY="45.0" prefHeight="35.0" prefWidth="270.0" promptText="Nouvelle mot de passe" />
+                              <JFXPasswordField fx:id="act" layoutX="45.0" layoutY="125.0" prefHeight="35.0" prefWidth="270.0" promptText="Mot de passe actuelle" />
+                              <JFXButton layoutX="109.0" layoutY="265.0" text="Enregistrer" />
+                              <JFXButton layoutX="138.0" layoutY="205.0" onMouseClicked="#save_pass" text="Enregistrer " />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </StackPane>
+      <JFXButton id="close" alignment="TOP_RIGHT" layoutX="554.0" layoutY="6.0" onMouseClicked="#close" prefHeight="25.0" prefWidth="25.0" text="X">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="min" alignment="TOP_RIGHT" layoutX="511.0" layoutY="6.0" onMouseClicked="#min" prefHeight="35.0" prefWidth="34.0" text="_">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+         <padding>
+            <Insets right="7.0" top="-21.0" />
+         </padding>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1014.0" style="-fx-background-color: transparent;" stylesheets="@main2.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="invent_immob.LoginController">
+   <children>
+      <StackPane layoutX="187.0" layoutY="102.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox style="-fx-background-color: #006aff;" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="324.0" prefWidth="495.0" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #fff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text fill="#006aff" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em; -fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #006aff;" text="Login" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox maxWidth="-Infinity" prefWidth="250.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="60.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXTextField fx:id="username" focusColor="#00bcd4" promptText="Nom d'utilisateur" unFocusColor="BLUE" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="60.0" layoutY="142.0" maxWidth="-Infinity" prefWidth="250.0">
+                           <children>
+                              <JFXPasswordField fx:id="password" focusColor="#00bcd4" onKeyReleased="#log" promptText="Mot de passe" unFocusColor="BLUE" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </JFXPasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fillHeight="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="75.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton id="log" buttonType="RAISED" onMouseClicked="#login" prefHeight="25.0" prefWidth="75.0" text="Log in" textFill="#fffbfb">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </children>
+      </StackPane>
+      <JFXButton id="close" alignment="TOP_RIGHT" layoutX="950.0" layoutY="16.0" onMouseClicked="#close" prefHeight="25.0" prefWidth="25.0" text="X">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="min" alignment="TOP_RIGHT" layoutX="900.0" layoutY="16.0" onMouseClicked="#min" prefHeight="35.0" prefWidth="34.0" text="_">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+         <padding>
+            <Insets right="7.0" top="-21.0" />
+         </padding>
+      </JFXButton>
+   </children>
+</AnchorPane>

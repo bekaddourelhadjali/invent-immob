@@ -1,0 +1,170 @@
+#min{
+      -fx-font-size:35px;
+    -fx-text-fill: #006aff;
+    -fx-background-color: white; 
+    -fx-border-color: #006aff; 
+    -fx-border-width: 2px; 
+     -fx-font-weight: bold;
+} 
+#min:hover,#min:pressed
+{-fx-text-fill: white;
+ -fx-background-color :  #aaa;
+ -fx-border-color:   #aaa;
+
+
+}
+#log{
+    -fx-font-size:15px;
+
+}
+#log2{
+    -fx-font-size:15px;
+
+}
+#close{
+    -fx-font-size:15px;
+    -fx-text-fill: red;
+    -fx-background-color: white; 
+    -fx-border-color: red; 
+    -fx-border-width: 2px; 
+    -fx-font-weight: bold;
+}
+ 
+ #close:hover,#close:pressed
+{-fx-text-fill: #fff;
+ -fx-background-color :  red;
+ -fx-border-color:   red;
+
+
+}
+.button
+{
+    -fx-background-color : #fff ;
+    -fx-border-radius: 5%;
+    -fx-text-fill: #006aff;
+    -fx-font-weight: bold;
+    -fx-border-color:   #006aff;
+    -fx-background-radius: 5%; 
+
+}
+#settings:hover{
+    -fx-background-color :  red;
+}
+.button:hover,.button:pressed
+{-fx-text-fill: #fff;
+ -fx-background-color :  #006aff;
+ -fx-border-color:   #006aff;
+
+}
+
+ 
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 40;
+    -fx-background-color:   #006aff;
+    -fx-font-size:15px;
+}
+.table-view .column-header .label{
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+    -fx-cell-size:30;
+    -fx-font-size:14px;
+    -fx-alignment: center-left;
+    -fx-text-fill: #000000;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+}
+.table-row-cell:selected .text {
+    -fx-fill : white ;
+
+}
+/*
+ scroll bar starts here 
+
+ The increment and decrement button CSS class of scrollbar 
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:150px;
+    -fx-text-fill:#fff;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color:  #006aff;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill:  #006aff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #fff;
+
+}
+
+ The main scrollbar **track** CSS class  
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(  #006aff,100%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+ The main scrollbar **thumb** CSS class which we drag every time (movable) 
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #006aff,100%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+ chart properties 
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}*/
+ .jfx-tab-pane:top .depth-container .tab-header-area .headers-region  ,.jfx-tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #006aff;}
+ 
